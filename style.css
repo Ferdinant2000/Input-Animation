@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap);
+
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#111;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.input_walper{
+    position: relative;
+    padding: 15px 0 0;
+}
+
+.input_field{
+    border: 1.5px solid #FFF;
+    font-size: 1rem;
+    border-radius: 8px;
+    color: #FFF;
+    padding: 8px;
+    padding-right: 32px;
+    background: transparent;
+    transition: .2s;
+    
+}
+
+.input_field::placeholder{
+    color: transparent;
+}
+
+.input_field:placeholder-shown ~ .input_label {
+    font-size: 1rem;
+    cursor:text;
+    color: #FFF;
+    top: 24px;
+    background: none;
+}
+
+label,
+.input_field:focus ~ .input_label {
+    position: absolute;
+    top: 6px;
+    padding: 0 4px;
+    display: block;
+    font-size: 14px;
+    left: 8px;
+    color: #FFF;
+    pointer-events: none;
+    transition: .2s;
+    outline: hidden;
+    border-radius: 5px;
+    background: #111;
+}
+
+.input_field:focus{
+    border: 1.5px solid #FFF;
+    outline: 1px solid #FFF;
+}
+
+i{
+    position: absolute;
+    right:5px;
+    bottom:0;
+    font-size: 20px;
+    width: 28px;
+    height: 28px;
+    color: #FFF;
+    transform-origin:center;
+    cursor: pointer;
+}
+
+.input_field:focus ~ i {
+    color: #FFF;
+}
